@@ -32,11 +32,24 @@ This project is for my podcast website. It contains information about the topics
 
 ## 🛠 Built With <a name="built-with"></a>
 
-HTML
-CSS
-Javascript
-
 ### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Languages</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">HTML</a></li>
+    <li><a href="https://reactjs.org/">Javascript</a></li>
+    <li><a href="https://expressjs.com/">CSS</a></li>
+  </ul>
+</details>
+
+### Key Features <a name="key-features"></a>
+
+> Describe between 1-3 key features of the application.
+
+- **[Add to do ]**
+- **[Delete to do]**
+- **[Edit to do]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +114,7 @@ To contribute to this project, execute the following command: git push https://g
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[Delete functionality]**
+- [ ] **[Interactive functionality]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
