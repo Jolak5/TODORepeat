@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-plusplus */
 // eslint-disable-next-line no-unused-vars
 
@@ -5,6 +6,7 @@
 import _ from 'lodash';
 import './style.css';
 import Task from '../modules/crud.js';
+import clearAllCompleted from '../modules/completed.js';
 
 const objTask = new Task();
 const inTask = {};
@@ -14,7 +16,6 @@ if (localStorage.savedTasks) {
 }
 
 const all = document.querySelector('.all');
-const ulElement = document.querySelector('.ulElement');
 const inputElement = document.querySelector('.inputElement');
 const btnCom = document.createElement('button');
 btnCom.innerHTML = 'Clear all completed';
@@ -34,19 +35,11 @@ window.addEventListener('keyup', (e) => {
 });
 
 btnCom.addEventListener('click', () => {
-  const result = objTask.tasks.filter((task) => task.completed === false);
-  objTask.tasks = result;
-  objTask.populateField();
-  ulElement.innerHTML = '';
-  all.innerHTML = `
-  <div class="title-div title">
-        <p>Today's To Do</p>
-        
-      </div>
-   
-  `;
+  clearAllCompleted();
   all.append(objTask.showTasks(), btnCom);
 });
 
 objTask.showTasks();
 all.append(btnCom);
+
+export default objTask;

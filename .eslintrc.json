@@ -12,6 +12,8 @@
   "extends": ["airbnb-base"],
   "rules": {
     "no-shadow": "off",
+    "comma-dangle": "off",
+    "no-console": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
     "import/extensions": [
